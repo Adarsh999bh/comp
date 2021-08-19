@@ -34,11 +34,24 @@ public class App
         Double dis1=new Double(Math.sqrt(Math.pow(l1[3]-l1[1],2)+Math.pow(l1[2]-l1[0],2)));
         Double dis2=new Double(Math.sqrt(Math.pow(l2[3]-l2[1],2)+Math.pow(l2[2]-l2[0],2)));
         System.out.println("length of line 1 = "+dis1+"\nlength of line 2 = "+dis2);
+
         //using equals method
         if (dis1.equals(dis2))
             System.out.println("Lines are equal");
         else
             System.out.println("Lines are not equal");
+        
+        //using compareto method
+        int com=dis1.compareTo(dis2);
+        if(com > 0) {
+            System.out.println("line 1 is larger than line 2");
+        }
+        else if(com < 0) {
+            System.out.println("line 1 is smaller than line 2");
+        }
+        else {
+             System.out.println("line 1 is equal to line 2");
+        }
 
 }
 }
